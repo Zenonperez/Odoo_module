@@ -1,0 +1,197 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="view_tree_member">
+      <field name="name">member.tree</field>
+      <field name="model">zpc2324.member</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="last_name"/>
+          <field name="age"/>
+          <field name="birthdate"/>
+          <field name="email"/>
+          <field name="phone"/>
+          <field name="salary"/>
+          <field name="id_number"/>
+          <field name="working"/>
+          <field name="team_id"/>
+          <field name="task_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_form_member">
+      <field name="name">member.form</field>
+      <field name="model">zpc2324.member</field>
+      <field name="arch" type="xml">
+        <form string="Member Form">
+          <group>
+            <field name="name"/>
+            <field name="last_name"/>
+            <field name="age"/>
+            <field name="birthdate"/>
+            <field name="email"/>
+            <field name="phone"/>
+            <field name="salary"/>
+            <field name="id_number"/>
+            <field name="working"/>
+            <field name="team_id"/>
+            <field name="task_id"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_tree_team">
+      <field name="name">team.tree</field>
+      <field name="model">zpc2324.team</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="leader_id"/>
+          <field name="member_number"/>
+          <field name="member_ids"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_form_team">
+      <field name="name">team.form</field>
+      <field name="model">zpc2324.team</field>
+      <field name="arch" type="xml">
+        <form string="Team Form">
+          <group>
+            <field name="name"/>
+            <field name="description"/>
+            <field name="leader_id"/>
+            <field name="member_number"/>
+            <field name="member_ids"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_tree_task">
+      <field name="name">task.tree</field>
+      <field name="model">zpc2324.task</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="taskStatus"/>
+          <field name="estimatedDuration"/>
+          <field name="members"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_form_task">
+      <field name="name">task.form</field>
+      <field name="model">zpc2324.task</field>
+      <field name="arch" type="xml">
+        <form string="Task Form">
+          <group>
+            <field name="name"/>
+            <field name="description"/>
+            <field name="taskStatus"/>
+            <field name="startDate"/>
+            <field name="taskMilestone"/>
+            <field name="estimatedDuration"/>
+            <field name="members"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="zpc2324.member_action_window">
+      <field name="name">Members</field>
+      <field name="res_model">zpc2324.member</field>
+      <field name="view_mode">tree,form,search</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="zpc2324.team_action_window">
+      <field name="name">Teams</field>
+      <field name="res_model">zpc2324.team</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="zpc2324.task_action_window">
+      <field name="name">Tasks</field>
+      <field name="res_model">zpc2324.task</field>
+      <field name="view_mode">tree,form,calendar,search</field>
+    </record>
+
+
+    <record id="view_calendar_task" model="ir.ui.view">
+      <field name="name">task.calendar</field>
+      <field name="model">zpc2324.task</field>
+      <field name="arch" type="xml">
+              <calendar string="Task Calendar" date_start="startDate" date_stop="taskMilestone" color="taskStatus"/>
+      </field>
+    </record>
+
+    <record id="view_search_task" model="ir.ui.view">
+      <field name="name">task.search</field>
+      <field name="model">zpc2324.task</field>
+      <field name="arch" type="xml">
+        <search string="Search Tasks">
+          <group expand="0" string="Group by">
+            <filter name="group_by_status" string="Task Status" context="{'group_by': 'taskStatus'}"/>
+          </group>
+            <filter string="Sort by Task todo" name="filter_todo" domain="[('taskStatus','=','todo')]"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="view_search_member" model="ir.ui.view">
+      <field name="name">member.search</field>
+      <field name="model">zpc2324.member</field>
+      <field name="arch" type="xml">
+        <search string="Search Members">
+          <group expand="0" string="Group by">
+            <filter name="group_by_memberisworking" string="Member working" context="{'group_by': 'working'}" />
+          </group>
+            <filter string="Sort by Member is working" name="filter_working" domain="[('working','=','1')]"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="zpc2324.action_server">
+      <field name="name">zpc2324 server</field>
+      <field name="model_id" ref="model_zpc2324_zpc2324"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="zpc2324" id="zpc2324.menu_root" web_icon="zpc2324,static/description/icon.png"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Members" id="zpc2324.member_menu" parent="zpc2324.menu_root" action="zpc2324.member_action_window"/>
+    <menuitem name="Teams" id="zpc2324.team_menu" parent="zpc2324.menu_root" action="zpc2324.team_action_window"/>
+    <menuitem name="Task" id="zpc2324.task_menu" parent="zpc2324.menu_root" action="zpc2324.task_action_window"/>
+
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="zpc2324.menu_1_list" parent="zpc2324.menu_1"
+              action="zpc2324.action_window"/>
+    <menuitem name="Server to list" id="zpc2324" parent="zpc2324.menu_2"
+              action="zpc2324.action_server"/>
+-->
+  </data>
+</odoo>

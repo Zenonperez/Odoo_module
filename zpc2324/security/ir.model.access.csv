@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_zpc2324_task_leader,zpc2324.task_leader,model_zpc2324_task,group_zpc2324_leader,1,1,1,1
+access_zpc2324_team_leader,zpc2324.team_leader,model_zpc2324_team,group_zpc2324_leader,1,1,1,1
+access_zpc2324_member_leader,zpc2324.member_leader,model_zpc2324_member,group_zpc2324_leader,1,1,1,1
+access_zpc2324_task_member,zpc2324.task_member,model_zpc2324_task,group_zpc2324_member,1,0,0,0
+access_zpc2324_team_member,zpc2324.team_member,model_zpc2324_team,group_zpc2324_member,1,0,0,0
+access_zpc2324_member_member,zpc2324.member_member,model_zpc2324_member,group_zpc2324_member,1,0,0,0

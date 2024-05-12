@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <report
+            id="report_zpc2324_team"
+            string="Report of a team"
+            model="zpc2324.team"
+            report_type="qweb-pdf"
+            name="zpc2324.template_zpc2324_team"
+    />
+    <template id="template_zpc2324_team">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="team">
+                <div class="page">
+                    <h2>Team Information</h2>
+                    <p>Department:
+                        <t t-esc="team.name"/>
+                    </p>
+                    <p>Leader:
+                        <t t-esc="team.leader_id"/>
+                    </p>
+                    <p>Number of Members:
+                        <t t-esc="team.member_number"/>
+                    </p>
+                    <p>Description:
+                        <t t-esc="team.description"/>
+                    </p>
+                    <h3>Team Members:</h3>
+                    <ul>
+                        <t t-foreach="team.member_ids" t-as="member">
+                            <li>
+                                <t t-esc="member.name"/>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,166 @@
+<odoo>
+    <data>
+
+          <record id="user_zpc2324" model="res.users">
+            <field name="name">Leader</field>
+            <field name="login">zpc2324</field>
+            <field name="password">zpc2324</field>
+            <field name="groups_id" eval="[Command.set([ref('base.group_user'), ref('group_zpc2324_leader'), ref('base.group_allow_export')])]"/>
+            <field name="image_1920" type="base64" file="base/static/img/user_demo-image.jpg"/>
+          </record>
+
+          <record id="employee_zpc" model="hr.employee">
+              <field name="name">Marc Leader</field>
+              <field name="user_id" ref="user_zpc2324"/>
+              <field name="job_title">Experienced Developer</field>
+              <field name="work_phone">+3281813700</field>
+              <field name="image_1920" type="base64" file="hr/static/img/employee_qdp-image.png"/>
+              <field name="create_date">2010-01-01 00:00:00</field>
+          </record>
+
+          <record id="member01" model="zpc2324.member">
+            <field name="name">Carlos</field>
+            <field name="last_name">Lopez Vega</field>
+            <field name="birthdate">2000-05-20</field>
+            <field name="email">carloslv@gmail.com</field>
+            <field name="phone">609406112</field>
+            <field name="id_number">45436781Q</field>
+            <field name="salary">1550.49</field>
+            <field name="working">1</field>
+          </record>
+
+         <record id="member02" model="zpc2324.member">
+            <field name="name">John</field>
+            <field name="last_name">Alberto Gutierrez</field>
+            <field name="birthdate">1995-04-13</field>
+            <field name="email">alv@gmail.com</field>
+            <field name="phone">612098765</field>
+            <field name="id_number">45321589M</field>
+            <field name="salary">1200.99</field>
+            <field name="working">1</field>
+          </record>
+
+         <record id="member03" model="zpc2324.member">
+            <field name="name">Alice</field>
+            <field name="last_name">Black Rose</field>
+            <field name="birthdate">1975-08-24</field>
+            <field name="email">alicebr@gmail.com</field>
+            <field name="phone">677882233</field>
+            <field name="id_number">41234591X</field>
+            <field name="salary">1600.89</field>
+            <field name="working">0</field>
+          </record>
+
+         <record id="member04" model="zpc2324.member">
+            <field name="name">Ferb</field>
+            <field name="last_name">Alonso Derek</field>
+            <field name="birthdate">1998-12-24</field>
+            <field name="email">DerekFerb@gmail.com</field>
+            <field name="phone">711239076</field>
+            <field name="id_number">41223344P</field>
+            <field name="salary">1550.33</field>
+            <field name="working">1</field>
+          </record>
+
+         <record id="member05" model="zpc2324.member">
+            <field name="name">Pedro</field>
+            <field name="last_name">Pascual Sanchez</field>
+            <field name="birthdate">2004-01-27</field>
+            <field name="email">pedrinpas@gmail.com</field>
+            <field name="phone">678653211</field>
+            <field name="id_number">49089765M</field>
+            <field name="salary">1109.76</field>
+            <field name="working">0</field>
+          </record>
+
+          <record id="task01" model="zpc2324.task">
+            <field name="name">Develop Funcionality</field>
+            <field name="description">Develop new funcionalities for the web</field>
+            <field name="taskStatus">todo</field>
+            <field name="startDate">2024-05-01</field>
+            <field name="taskMilestone">2024-06-10</field>
+            <field name="estimatedDuration">80</field>
+            <field name="members" eval="[(6,0,[ref('member01'), ref('member03'), ref('member04'), ref('member02')])]"/>
+          </record>
+
+          <record id="task02" model="zpc2324.task">
+            <field name="name">Test Funcionality</field>
+            <field name="description">Test the new funcionalities and review it</field>
+            <field name="taskStatus">todo</field>
+            <field name="startDate">2024-05-01</field>
+            <field name="taskMilestone">2024-06-20</field>
+            <field name="estimatedDuration">20</field>
+            <field name="members" eval="[(6,0,[ref('member01'), ref('member02'), ref('member05')])]"/>
+          </record>
+
+         <record id="task03" model="zpc2324.task">
+            <field name="name">Optimize web service</field>
+            <field name="description">We need our web to work more faster</field>
+            <field name="taskStatus">canceled</field>
+            <field name="startDate">2024-03-02</field>
+            <field name="taskMilestone">2024-04-12</field>
+            <field name="estimatedDuration">120</field>
+            <field name="members" eval="[(6,0,[ref('member03'), ref('member05')])]"/>
+          </record>
+
+         <record id="task04" model="zpc2324.task">
+            <field name="name">Backend of the new module</field>
+            <field name="description">Work in the new Backend of the module to do projects</field>
+            <field name="taskStatus">in_progres</field>
+            <field name="startDate">2024-04-10</field>
+            <field name="taskMilestone">2024-05-20</field>
+            <field name="estimatedDuration">200</field>
+            <field name="members" eval="[(6,0,[ref('member01'), ref('member02'), ref('member03'), ref('member05')])]"/>
+          </record>
+
+         <record id="task05" model="zpc2324.task">
+            <field name="name">New web forum</field>
+            <field name="description">Do the web forum from our main page</field>
+            <field name="taskStatus">done</field>
+            <field name="startDate">2024-02-28</field>
+            <field name="taskMilestone">2024-03-31</field>
+            <field name="estimatedDuration">140</field>
+            <field name="members" eval="[(6,0,[ref('member02')])]"/>
+          </record>
+
+         <record id="team01" model="zpc2324.team">
+            <field name="name">Research Team</field>
+            <field name="leader_id" ref="employee_zpc"/>
+            <field name="member_ids" eval="[(6,0,[ref('member01')])]"/>
+            <field name="description">Team to research and investigate new things</field>
+         </record>
+
+         <record id="team02" model="zpc2324.team">
+            <field name="name">Development Team</field>
+            <field name="leader_id" ref="employee_zpc"/>
+            <field name="member_ids" eval="[(6,0,[ref('member02'), ref('member03')])]"/>
+            <field name="description">Team to develop new features</field>
+         </record>
+
+         <record id="team03" model="zpc2324.team">
+            <field name="name">Test Team</field>
+            <field name="leader_id" ref="employee_zpc"/>
+            <field name="member_ids" eval="[(6,0,[ref('member04')])]"/>
+            <field name="description">Team to try the things</field>
+         </record>
+
+         <record id="team04" model="zpc2324.team">
+            <field name="name">Backend Team</field>
+            <field name="leader_id" ref="employee_zpc"/>
+            <field name="member_ids" eval="[(6,0,[ref('member05')])]"/>
+            <field name="description">Team that works on the backend of our projects</field>
+         </record>
+
+        <record id="team05" model="zpc2324.team">
+            <field name="name">Frontend Team</field>
+            <field name="leader_id" ref="employee_zpc"/>
+            <field name="member_ids" />
+            <field name="description">Team that works on the frontend of our projects</field>
+         </record>
+
+
+
+
+
+    </data>
+</odoo>

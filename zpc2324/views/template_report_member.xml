@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <report
+            id="report_zpc2324_member"
+            string="Report of a member"
+            model="zpc2324.member"
+            report_type="qweb-pdf"
+            name="zpc2324.template_zpc2324_member"
+    />
+    <template id="template_zpc2324_member">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="member">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Member Information</h2>
+                        <p>Name:
+                            <span t-field="member.name"/>
+                        </p>
+                        <p>Last Name:
+                            <span t-field="member.last_name"/>
+                        </p>
+                        <p>Age:
+                            <span t-field="member.age"/>
+                        </p>
+                        <p>Birthdate:
+                            <span t-field="member.birthdate"/>
+                        </p>
+                        <p>Email:
+                            <span t-field="member.email"/>
+                        </p>
+                        <p>Phone:
+                            <span t-field="member.phone"/>
+                        </p>
+                        <p>ID:
+                            <span t-field="member.id_number"/>
+                        </p>
+                        <p>Salary:
+                            <span t-field="member.salary"/>
+                        </p>
+                        <p>Working:
+                            <span t-if="member.working">Yes</span>
+                            <span t-else="">No</span>
+                        </p>
+                        <p>Team:
+                            <span t-field="member.team_id.name"/>
+                        </p>
+                        <p>Tasks:</p>
+                        <ul>
+                            <t t-foreach="member.task_id" t-as="task">
+                                <li>
+                                    <span t-field="task.name"/>
+                                </li>
+                            </t>
+                        </ul>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

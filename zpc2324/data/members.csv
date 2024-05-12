@@ -1,0 +1,2 @@
+name,last_name,age,birthdate,email,phone,id_number,salary,working,team_id,task_ids
+Carlos,Lopez Vega,24,20/05/2000,caloslv@gmail.com,694060123,48432178Q,'1500,49',true,1,'1,2'

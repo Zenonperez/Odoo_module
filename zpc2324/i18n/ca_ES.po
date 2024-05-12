@@ -1,0 +1,304 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* zpc2324
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-08 20:47+0000\n"
+"PO-Revision-Date: 2024-05-08 23:17+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__age
+msgid "Age"
+msgstr "Edat"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__estimatedDuration
+msgid "Aproximated duration"
+msgstr "Durada aproximada"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__birthdate
+msgid "Birthdate"
+msgstr "Data de naixement"
+
+#. module: zpc2324
+#: model:ir.model.fields.selection,name:zpc2324.selection__zpc2324_task__taskStatus__canceled
+msgid "Canceled"
+msgstr "Cancel·lat"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__create_uid
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__create_uid
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__create_uid
+msgid "Created by"
+msgstr "Creada per"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__create_date
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__create_date
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__create_date
+msgid "Created on"
+msgstr "Creada el"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__startDate
+msgid "Datetime"
+msgstr "Data i hora"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__name
+msgid "Department"
+msgstr "Departament"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__description
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__description
+msgid "Description"
+msgstr "Descripció"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__display_name
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__display_name
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__display_name
+msgid "Display Name"
+msgstr "Nombre visible"
+
+#. module: zpc2324
+#: model:ir.model.fields.selection,name:zpc2324.selection__zpc2324_task__taskStatus__done
+msgid "Done"
+msgstr "Fet"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__email
+msgid "Email"
+msgstr "Email"
+
+#. module: zpc2324
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_search_member
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_search_task
+msgid "Group by"
+msgstr "Agrupat per"
+
+#. module: zpc2324
+#: model:ir.module.category,description:zpc2324.module_category_zpc2324
+msgid "Helps you manage projects"
+msgstr "Ajuda a administrar un projecte"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__id
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__id_number
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__id
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__id
+msgid "ID"
+msgstr "ID"
+
+#. module: zpc2324
+#: model:ir.model.fields.selection,name:zpc2324.selection__zpc2324_task__taskStatus__in_progres
+msgid "In Progress"
+msgstr "En desenvolupament"
+
+#. module: zpc2324
+#: model:ir.model.fields,help:zpc2324.field_zpc2324_member__working
+msgid "Is this member working?"
+msgstr "Esta aquest membre treballant?"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member____last_update
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task____last_update
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team____last_update
+msgid "Last Modified on"
+msgstr "Última vegada modificada el"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__last_name
+msgid "Last Name"
+msgstr "Cognoms"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__write_uid
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__write_uid
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__write_uid
+msgid "Last Updated by"
+msgstr "Última vegada actualizat per"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__write_date
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__write_date
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__write_date
+msgid "Last Updated on"
+msgstr "Última vegada actualizat el"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__leader_id
+#: model:res.groups,name:zpc2324.group_zpc2324_leader
+msgid "Leader"
+msgstr "Lider"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__member_number
+msgid "Member"
+msgstr "Membre"
+
+#. module: zpc2324
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_form_member
+msgid "Member Form"
+msgstr "Formulari de membre"
+
+#. module: zpc2324
+#: model:ir.model,name:zpc2324.model_zpc2324_member
+msgid "Member of a team in a project organization"
+msgstr "Membre de un equip en un projecte"
+
+#. module: zpc2324
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_search_member
+msgid "Member working"
+msgstr "Membre treballant"
+
+#. module: zpc2324
+#: model:ir.actions.act_window,name:zpc2324.member_action_window
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__members
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_team__member_ids
+#: model:ir.ui.menu,name:zpc2324.member_menu
+#: model:res.groups,name:zpc2324.group_zpc2324_member
+msgid "Members"
+msgstr "Membres"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__taskMilestone
+msgid "Milestone"
+msgstr "Data d'entrega"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__phone
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__salary
+msgid "Salary"
+msgstr "Salari"
+
+#. module: zpc2324
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_search_member
+msgid "Search Members"
+msgstr "Buscar Membres"
+
+#. module: zpc2324
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_search_task
+msgid "Search Tasks"
+msgstr "Buscar tasques"
+
+#. module: zpc2324
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_search_member
+msgid "Sort by Member is working"
+msgstr "Ordenar per membres treballant"
+
+#. module: zpc2324
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_search_task
+msgid "Sort by Task todo"
+msgstr "Ordenar per tasques en per fer"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__name
+#: model:ir.ui.menu,name:zpc2324.task_menu
+msgid "Task"
+msgstr "Tasca"
+
+#. module: zpc2324
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_calendar_task
+msgid "Task Calendar"
+msgstr "Calendari de tasques"
+
+#. module: zpc2324
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_form_task
+msgid "Task Form"
+msgstr "Formulari de tasques"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_task__taskStatus
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_search_task
+msgid "Task Status"
+msgstr "Estat de la tasca"
+
+#. module: zpc2324
+#: model:ir.actions.act_window,name:zpc2324.task_action_window
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__task_id
+msgid "Tasks"
+msgstr "Tasques"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__team_id
+msgid "Team"
+msgstr "Equip"
+
+#. module: zpc2324
+#: model_terms:ir.ui.view,arch_db:zpc2324.view_form_team
+msgid "Team Form"
+msgstr "Formulari de equip"
+
+#. module: zpc2324
+#: model:ir.actions.act_window,name:zpc2324.team_action_window
+#: model:ir.ui.menu,name:zpc2324.team_menu
+msgid "Teams"
+msgstr "Equips"
+
+#. module: zpc2324
+#: model:ir.model.constraint,message:zpc2324.constraint_zpc2324_member_id_number_uniq
+msgid "The member ID alredy exists !"
+msgstr "La ID del membre ja existeix!"
+
+#. module: zpc2324
+#: model:ir.model,name:zpc2324.model_zpc2324_task
+msgid "The tasks required to do a project"
+msgstr "Tasques requerides per a la realizació d'un projecte"
+
+#. module: zpc2324
+#: model:ir.model,name:zpc2324.model_zpc2324_team
+msgid "The team in a project organization"
+msgstr "El equip en el desenvolupament d'un projecte"
+
+#. module: zpc2324
+#: model:res.groups,comment:zpc2324.group_zpc2324_leader
+msgid "The user will be able to create new tasks, add new members and new teams"
+msgstr "Usuari que pot crear tasques, usuaris i equips"
+
+#. module: zpc2324
+#: model:res.groups,comment:zpc2324.group_zpc2324_member
+msgid "The user will be able to see the view but no edit"
+msgstr "Usuario que pot veure tot pero no modificarlo"
+
+#. module: zpc2324
+#: model:ir.model.fields.selection,name:zpc2324.selection__zpc2324_task__taskStatus__todo
+msgid "ToDo"
+msgstr "Per fer"
+
+#. module: zpc2324
+#: model:ir.model.fields,field_description:zpc2324.field_zpc2324_member__working
+msgid "Working"
+msgstr "Treballant"
+
+#. module: zpc2324
+#: model:ir.module.category,name:zpc2324.module_category_zpc2324
+msgid "Zpc2324"
+msgstr "Zpc2324"
+
+#. module: zpc2324
+#: model:ir.ui.menu,name:zpc2324.menu_root
+msgid "zpc2324"
+msgstr "zpc2324"

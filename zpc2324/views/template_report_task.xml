@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <report
+            id="report_zpc2324_task"
+            string="Report of a task"
+            model="zpc2324.task"
+            report_type="qweb-pdf"
+            name="zpc2324.template_zpc2324_task"
+    />
+
+    <template id="template_zpc2324_task">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="task">
+                <div class="page">
+                    <h2>Task Information</h2>
+                    <p>Task:
+                        <t t-esc="task.name"/>
+                    </p>
+                    <p>Description:
+                        <t t-esc="task.description"/>
+                    </p>
+                    <p>Task Status:
+                        <t t-esc="task.taskStatus"/>
+                    </p>
+                    <p>Start Date:
+                        <t t-esc="task.startDate"/>
+                    </p>
+                    <p>Milestone:
+                        <t t-esc="task.taskMilestone"/>
+                    </p>
+                    <p>Estimated Duration:
+                        <t t-esc="task.estimatedDuration"/>
+                    </p>
+                    <p>Members:</p>
+                    <ul>
+                        <t t-foreach="task.members" t-as="member">
+                            <li>
+                                <t t-esc="member.name"/>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
